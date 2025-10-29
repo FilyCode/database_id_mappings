@@ -19,13 +19,14 @@ Here are the primary scripts included in this repository, each focused on specif
 *   `query-protein-interactions-from-biogrid.py`
     Designed for specific protein interaction studies, this script queries the BioGRID database for **primary and secondary interactors** of a target protein (e.g., human P53) identified by its Entrez Gene ID. It filters interactions by evidence count and species, then maps the BioGRID-derived Entrez Gene IDs to UniProtKB accessions. Finally, it integrates these findings with a user-provided protein list (RefSeq IDs), classifying proteins as 'primary', 'secondary', or 'no interaction' with the target.
 
-### Shell Scripts (for HPC/SGE)
+### Shell Scripts (for HPC)
+ Specifically designed for the Boston University Shared Computing Cluster (SCC) but can easyily be adapted to ones needs.
 
 *   `run-biogrid-interaction-pipeline.sh`
-    A Slurm Grid Engine (SGE) submission script to execute `query-protein-interactions-from-biogrid.py` on a high-performance computing (HPC) cluster, managing resource allocation and environment setup.
+    A submission script to execute `query-protein-interactions-from-biogrid.py` on a high-performance computing cluster, managing resource allocation and environment setup. Specifically designed for the Boston University Shared Computing Cluster (SCC) but can easyily be adapted to ones needs.
 
 *   `run-biogrid-pipeline.sh`
-    A Slurm Grid Engine (SGE) submission script to execute `map-AA-sequence-to-biogrid-dataset.py` on an HPC cluster, configuring job parameters for memory and time.
+    A submission script to execute `map-AA-sequence-to-biogrid-dataset.py` on an HPC cluster, configuring job parameters for memory and time.
 
 ## Setup & Prerequisites
 
