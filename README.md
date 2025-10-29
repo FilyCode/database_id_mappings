@@ -31,7 +31,7 @@ Here are the primary scripts included in this repository, each focused on specif
 ## Setup & Prerequisites
 
 1.  **Conda Environment:**
-    Ensure you have a Python environment set up with necessary libraries (e.g., `pandas`, `requests`, `tqdm`, `biopython`, `uniprot-id-mapper`). A `requirements.txt` or `environment.yml` can be added for easy setup.
+    Ensure you have a Python environment set up with necessary libraries (e.g., `pandas`, `requests`, `tqdm`, `biopython`, `uniprot-id-mapper`).
 
 2.  **API Keys:**
     *   **BioGRID:** Obtain a free [BioGRID Access Key](https://thebiogrid.org/services.php) and update `BIOGRID_ACCESS_KEY` in the relevant Python scripts.
