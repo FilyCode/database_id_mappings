@@ -7,7 +7,7 @@
 #$ -P cancergrp
 
 # Hard time limit (hh:mm:ss). Adjust as needed.
-#$ -l h_rt=12:00:00
+#$ -l h_rt=48:00:00
 
 # Job name
 #$ -N BiogridSequenceMapper
@@ -21,11 +21,8 @@
 # Your email address for notifications
 #$ -M phitro@bu.edu
 
-# Request 1 core for this single-threaded Python script.
-#$ -pe omp 1
-
-# Request 16GB total memory for the job.
-#$ -l mem_per_core=64G
+# Request 32GB total memory for the job.
+#$ -l mem_per_core=8G
 
 # --------------------------------------------------------------------------------
 # Setup Conda Environment
@@ -54,7 +51,7 @@ mkdir -p data
 echo "Job started on host: $(hostname)"
 echo "Requested CPU cores (NSLOTS): $NSLOTS" # Will be 1 with -pe omp 1
 
-python query-protein-interactions-from-biogrid.py
+python query-protein-interactions-from-biogrid_several_ids.py
 
 # --------------------------------------------------------------------------------
 # Post-job Cleanup
